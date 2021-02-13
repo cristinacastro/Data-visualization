@@ -1,20 +1,27 @@
 import React from "react";
-import TimeGroupedChart from "./components/TimeGroupedChart.js";
-import TempDataChart from "./components/TempDataChart";
-import HumidityDataChart from "./components/HumidityDataChart";
+import "./App.css";
+import Charts from "./components/Charts";
 
 const App = () => {
   return (
-    <div>
-      <div>
-        <TempDataChart />
-      </div>
-      <div>
-        {" "}
-        <HumidityDataChart />
-      </div>
-      <div>
-        <TimeGroupedChart />
+    <div className="charts-container">
+      <div className="line-charts">
+        <Charts
+          options={{
+            legend: {
+              display: false,
+            },
+            scales: {
+              xAxes: [
+                {
+                  gridLines: {
+                    display: false,
+                  },
+                },
+              ],
+            },
+          }}
+        />
       </div>
     </div>
   );
