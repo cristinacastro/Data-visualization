@@ -1,13 +1,12 @@
 .charts-container {
   padding: 20px 0 20px 170px;
-  width: 66%;
-  border: red 1px solid;
+  width: 57%;
 }
 
 .line-charts-container {
   display: flex;
   flex-direction: row;
-  padding-top: 20px;
+  padding-top: 10px;
   width: 100%;
 }
 
@@ -39,7 +38,7 @@
 }
 
 .bar-chart {
-  padding: 20px 20px 20px 20px;
+  padding: 0 20px 20px 20px;
 }
 
 .humidity-chart-container h4 {

@@ -7,6 +7,7 @@
   border-radius: 15px;
   margin: 10px;
   padding: 25px 0;
+  width: 180px;
 }
 
 .percentage-info {
@@ -17,7 +18,7 @@
 }
 
 .percentage-info img {
-  width: 30px;
+  width: 25px;
   margin-right: 10px;
 }
 

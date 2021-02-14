@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
 import Dashboard from "./components/Dashboard";
 

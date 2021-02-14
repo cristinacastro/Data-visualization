@@ -28,14 +28,11 @@ export default function Dashboard() {
             percentage="0.6%"
             icon="./img/up-red.png"
           />
-          <div
-            className="variations-card"
-            style={{ backgroundColor: "#91b3fa" }}
-          >
-            <h3 style={{ color: "white" }}>See Historial</h3>
-          </div>
         </div>
       </section>
+      <div className="illustration">
+        <img src="./img/illustration.png"></img>
+      </div>
     </div>
   );
 }
