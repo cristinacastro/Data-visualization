@@ -1,0 +1,33 @@
+.variations-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 5px rgba(149, 149, 149, 0.609);
+  border-radius: 15px;
+  margin: 10px;
+  padding: 25px 0;
+}
+
+.percentage-info {
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.percentage-info img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.progression-line img {
+  width: 120px;
+  padding: 20px 0;
+}
+
+.variations-card h3 {
+  width: 60%;
+  text-align: center;
+  padding: 0;
+}

@@ -1,5 +1,24 @@
-.temp-chart {
+* {
+  margin: 0;
 }
 
-.humi-chart {
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h3 {
+  font-size: 1.1rem;
+  padding: 20px 0 5px 20px;
+}
+
+h4 {
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0 20px 0 20px;
+}
+
+a {
+  text-decoration: none;
 }

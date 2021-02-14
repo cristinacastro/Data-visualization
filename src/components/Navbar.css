@@ -1,0 +1,26 @@
+.navbar-container {
+  width: 7%;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+}
+
+.navbar-ul {
+  list-style: none;
+  padding-top: 60px;
+}
+
+.navbar-ul li {
+  padding-top: 40px;
+}
+
+.navbar-ul li a {
+  color: black;
+}
+
+.logo {
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding-top: 30px;
+}

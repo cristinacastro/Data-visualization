@@ -1,28 +1,14 @@
 import React from "react";
 import "./App.css";
 import Charts from "./components/Charts";
+import Navbar from "./components/Navbar";
+import Dashboard from "./components/Dashboard";
 
 const App = () => {
   return (
-    <div className="charts-container">
-      <div className="line-charts">
-        <Charts
-          options={{
-            legend: {
-              display: false,
-            },
-            scales: {
-              xAxes: [
-                {
-                  gridLines: {
-                    display: false,
-                  },
-                },
-              ],
-            },
-          }}
-        />
-      </div>
+    <div>
+      <Navbar />
+      <Dashboard />
     </div>
   );
 };

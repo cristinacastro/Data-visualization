@@ -1,0 +1,14 @@
+.dashboard-container {
+  background-color: #eeeeee;
+  height: 100vh;
+  display: flex;
+  width: 80%;
+}
+
+.variations-container {
+  width: 100%;
+}
+
+.variations-info {
+  margin: 0 auto;
+}

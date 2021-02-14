@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Line, Bar } from "react-chartjs-2";
 import axios from "axios";
 import moment from "moment";
+import "./Charts.css";
 
-const Charts = (props) => {
+const Charts = () => {
   const [chartTempData, setChartTempData] = useState({});
   const [chartHumData, setChartHumData] = useState({});
   const [chartBarData, setChartBarData] = useState({});
@@ -20,7 +21,7 @@ const Charts = (props) => {
 
       for (let i = 0; i < response.data.m.length; i++) {
         labels.push(
-          moment(response.data.m[i].d.timestamp).format("HH:mm:ss.SSS")
+          moment(response.data.m[i].d.timestamp).format("HH:mm") //per motius de disseny ui es redueix el format del timestamp a ts, per veure diferència s'hauria de fer servir aquest altre format:moment(response.data.m[i].d.timestamp).format("HH:mm:ss.SSS")
         );
         tempData.push(response.data.m[i].d.ambient_temperature);
         humiData.push(response.data.m[i].d.humidity);
@@ -33,8 +34,11 @@ const Charts = (props) => {
             label: "Temperature",
             data: tempData,
             fill: false,
-            borderColor: "rgba(186, 108, 120,0.8)",
-            pointBorderColor: "rgba(186, 108, 120,0.9)",
+            borderColor: "rgba(233, 97, 90,0.9)",
+            pointBorderColor: "rgba(233, 97, 90,0.9)",
+            pointBorderWidth: 0.3,
+            backgroundColor: "rgba(233, 97, 90,0.9)",
+            borderWidth: 2,
           },
         ],
       });
@@ -46,27 +50,30 @@ const Charts = (props) => {
             label: "Humidity",
             data: humiData,
             fill: false,
-            borderColor: "rgba(65, 103, 166,0.8)",
-            pointBorderColor: "rgba(65, 103, 166,0.9)",
+            borderColor: "rgba(145, 178, 250,0.9)",
+            pointBorderColor: "rgba(145, 178, 250,0.9)",
+            pointBorderWidth: 0.3,
+            backgroundColor: "rgba(145, 178, 250,0.9)",
+            borderWidth: 2,
           },
         ],
       });
 
       setChartBarData({
-        labels: labels.slice(0, 15),
+        labels: labels.slice(0, 20),
         datasets: [
           {
             label: "Temperature",
-            data: tempData.slice(0, 15),
-            backgroundColor: "rgba(186, 108, 120, 1)",
-            borderColor: "rgba(186, 108, 120, 1)",
+            data: tempData.slice(0, 20),
+            backgroundColor: "rgba(233, 97, 90, 1)",
+            borderColor: "rgba(233, 97, 90, 1)",
           },
 
           {
             label: "Humidity",
-            data: humiData.slice(0, 15),
-            backgroundColor: "rgba(65, 103, 166,0.5)",
-            borderColor: "rgba(65, 103, 166,0.5)",
+            data: humiData.slice(0, 20),
+            backgroundColor: "rgba(145, 178, 250,0.8)",
+            borderColor: "rgba(145, 178, 250,0.8)",
           },
         ],
       });
@@ -80,15 +87,78 @@ const Charts = (props) => {
   }, []);
 
   return (
-    <div>
-      <div className="temp-chart">
-        <Line data={chartTempData} />
+    <section className="charts-container">
+      <div className="bar-chart-container">
+        <h3>Overview</h3>
+        <div className="bar-chart">
+          <Bar
+            data={chartBarData}
+            options={{
+              legend: {
+                display: true,
+              },
+              scales: {
+                xAxes: [
+                  {
+                    gridLines: {
+                      display: false,
+                    },
+                  },
+                ],
+              },
+            }}
+          />
+        </div>
       </div>
-      <div className="humidity-chart">
-        <Line data={chartHumData} />
+      <div className="line-charts-container">
+        <div className="temp-chart-container">
+          <h3>Temperature</h3>
+          <h4>Last hour</h4>
+          <div className="line-chart">
+            <Line
+              data={chartTempData}
+              options={{
+                legend: {
+                  display: false,
+                },
+                scales: {
+                  xAxes: [
+                    {
+                      gridLines: {
+                        display: false,
+                      },
+                    },
+                  ],
+                },
+              }}
+            />
+          </div>
+        </div>
+        <div className="humidity-chart-container">
+          <h3>Humidity</h3>
+          <h4>Last hour</h4>
+          <div className="line-chart">
+            <Line
+              data={chartHumData}
+              options={{
+                legend: {
+                  display: false,
+                },
+                scales: {
+                  xAxes: [
+                    {
+                      gridLines: {
+                        display: false,
+                      },
+                    },
+                  ],
+                },
+              }}
+            />
+          </div>
+        </div>
       </div>
-      <Bar data={chartBarData} />
-    </div>
+    </section>
   );
 };
 

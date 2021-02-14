@@ -1,0 +1,51 @@
+.charts-container {
+  padding: 20px 0 20px 170px;
+  width: 66%;
+  border: red 1px solid;
+}
+
+.line-charts-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.line-chart {
+  padding: 20px 20px 20px 20px;
+}
+
+.temp-chart-container {
+  background-color: #ffffff;
+  box-shadow: 5px 5px 5px rgba(149, 149, 149, 0.609);
+  border-radius: 15px;
+  margin: 10px;
+  width: 50%;
+}
+
+.humidity-chart-container {
+  background-color: #ffffff;
+  box-shadow: 5px 5px 5px rgba(149, 149, 149, 0.609);
+  border-radius: 15px;
+  margin: 10px;
+  width: 50%;
+}
+
+.bar-chart-container {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 5px rgba(149, 149, 149, 0.609);
+  border-radius: 15px;
+}
+
+.bar-chart {
+  padding: 20px 20px 20px 20px;
+}
+
+.humidity-chart-container h4 {
+  color: #5475bb;
+}
+
+.temp-chart-container h4 {
+  color: rgb(211, 67, 67);
+}
