@@ -7,14 +7,12 @@
 
 .variations-container {
   width: 100%;
-  padding: 380px 0 15px 0;
-  display: flex;
-  flex-direction: row;
+  padding: 10px 0 15px 10px;
 }
 
 .variations-info {
-  margin: 0 auto;
-  height: 90vh;
+  padding-left: 20px;
+  width: auto;
 }
 
 .illustration {
@@ -25,5 +23,19 @@
 }
 
 .illustration img {
-  width: 32%;
+  width: 30%;
+}
+
+.top-menu {
+  position: absolute;
+  right: 1px;
+  top: 0px;
+  background-color: white;
+  height: 100vh;
+  width: 20%;
+}
+
+.top-menu-ul {
+  display: flex;
+  list-style: none;
 }

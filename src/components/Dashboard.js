@@ -6,6 +6,15 @@ import VariationCard from "./VariationCard";
 export default function Dashboard() {
   return (
     <div className="dashboard-container">
+      <section className="top-menu-container">
+        <nav className="top-menu">
+          <ul className="top-menu-ul">
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+          </ul>
+        </nav>
+      </section>
       <Charts />
 
       <section className="variations-info">
