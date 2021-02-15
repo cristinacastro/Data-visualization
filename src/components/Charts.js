@@ -60,18 +60,18 @@ const Charts = () => {
       });
 
       setChartBarData({
-        labels: labels.slice(0, 20),
+        labels: labels.slice(0, 15),
         datasets: [
           {
             label: "Temperature",
-            data: tempData.slice(0, 20),
+            data: tempData.slice(0, 15),
             backgroundColor: "rgba(233, 97, 90, 1)",
             borderColor: "rgba(233, 97, 90, 1)",
           },
 
           {
             label: "Humidity",
-            data: humiData.slice(0, 20),
+            data: humiData.slice(0, 15),
             backgroundColor: "rgba(145, 178, 250,0.8)",
             borderColor: "rgba(145, 178, 250,0.8)",
           },
