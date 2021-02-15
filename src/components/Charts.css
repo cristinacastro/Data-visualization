@@ -1,12 +1,12 @@
 .charts-container {
-  padding: 20px 0 20px 170px;
-  width: 57%;
+  padding: 40px 10px 40px 190px;
+  width: 53%;
 }
 
 .line-charts-container {
   display: flex;
   flex-direction: row;
-  padding-top: 10px;
+  padding-top: 20px;
   width: 100%;
 }
 
@@ -14,14 +14,7 @@
   padding: 20px 20px 20px 20px;
 }
 
-.temp-chart-container {
-  background-color: #ffffff;
-  box-shadow: 5px 5px 5px rgba(149, 149, 149, 0.609);
-  border-radius: 15px;
-  margin: 10px;
-  width: 50%;
-}
-
+.temp-chart-container,
 .humidity-chart-container {
   background-color: #ffffff;
   box-shadow: 5px 5px 5px rgba(149, 149, 149, 0.609);

@@ -1,11 +1,11 @@
 import React from "react";
 import "./Navbar.css";
-import DashboardOutlinedIcon from "@material-ui/icons/DashboardOutlined";
-import AcUnitOutlinedIcon from "@material-ui/icons/AcUnitOutlined";
-import OpacityOutlinedIcon from "@material-ui/icons/OpacityOutlined";
-import WavesOutlinedIcon from "@material-ui/icons/WavesOutlined";
-import LinkedCameraOutlinedIcon from "@material-ui/icons/LinkedCameraOutlined";
-import HistoryOutlinedIcon from "@material-ui/icons/HistoryOutlined";
+import Dashboard from "@material-ui/icons/DashboardOutlined";
+import Temperature from "@material-ui/icons/AcUnitOutlined";
+import Humidity from "@material-ui/icons/OpacityOutlined";
+import Radiation from "@material-ui/icons/WavesOutlined";
+import Photosensor from "@material-ui/icons/LinkedCameraOutlined";
+import History from "@material-ui/icons/HistoryOutlined";
 
 export default function Navbar() {
   return (
@@ -15,23 +15,23 @@ export default function Navbar() {
         <ul className="navbar-ul">
           <li>
             <a href="/">
-              <DashboardOutlinedIcon style={{ fontSize: 30 }} />
+              <Dashboard style={{ fontSize: 35 }} />
             </a>
           </li>
           <li>
-            <AcUnitOutlinedIcon style={{ fontSize: 30 }} />
+            <Temperature style={{ fontSize: 35 }} />
           </li>
           <li>
-            <OpacityOutlinedIcon style={{ fontSize: 30 }} />
+            <Humidity style={{ fontSize: 35 }} />
           </li>
           <li>
-            <WavesOutlinedIcon style={{ fontSize: 30 }} />
+            <Radiation style={{ fontSize: 35 }} />
           </li>
           <li>
-            <LinkedCameraOutlinedIcon style={{ fontSize: 30 }} />
+            <Photosensor style={{ fontSize: 35 }} />
           </li>
           <li>
-            <HistoryOutlinedIcon style={{ fontSize: 30 }} />
+            <History style={{ fontSize: 35 }} />
           </li>
         </ul>
       </nav>

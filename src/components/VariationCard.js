@@ -14,6 +14,7 @@ export default function VariationCard(props) {
         </div>
         <div>{props.percentage}</div>
       </div>
+      <h4>See History </h4>
     </div>
   );
 }

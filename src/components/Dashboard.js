@@ -2,6 +2,9 @@ import React from "react";
 import "./Dashboard.css";
 import Charts from "./Charts";
 import VariationCard from "./VariationCard";
+import Logout from "@material-ui/icons/ExitToAppOutlined";
+import Settings from "@material-ui/icons/TuneOutlined";
+import Profile from "@material-ui/icons/PersonOutlineOutlined";
 
 export default function Dashboard() {
   return (
@@ -9,12 +12,23 @@ export default function Dashboard() {
       <section className="top-menu-container">
         <nav className="top-menu">
           <ul className="top-menu-ul">
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
+            <li> Hello, Cristina</li>
+            <li>
+              <Profile style={{ fontSize: 35 }} />
+            </li>
+            <li>
+              <Settings style={{ fontSize: 35 }} />
+            </li>
+            <li>
+              <Logout style={{ fontSize: 35 }} />
+            </li>
           </ul>
         </nav>
       </section>
+      <section className="calendar">
+        <img src="./img/calendar.png" />
+      </section>
+
       <Charts />
 
       <section className="variations-info">
